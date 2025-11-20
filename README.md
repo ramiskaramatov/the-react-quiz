@@ -4,6 +4,26 @@
 
 A React-based quiz application with timer functionality and progress tracking.
 
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+You can deploy this project using any static hosting service such as Netlify, Vercel, or GitHub Pages.
+
+Build the project with `npm run build` and deploy the `dist` folder.
+
+## The screenshots of the app
+![Group 1](https://github.com/user-attachments/assets/ebb8de45-7d5b-482a-9207-d1183f99eff8)
+
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
@@ -43,24 +63,5 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-You can deploy this project using any static hosting service such as Netlify, Vercel, or GitHub Pages.
-
-Build the project with `npm run build` and deploy the `dist` folder.
-
-## The screenshots of the app
-![Group 1](https://github.com/user-attachments/assets/ebb8de45-7d5b-482a-9207-d1183f99eff8)
 
 
