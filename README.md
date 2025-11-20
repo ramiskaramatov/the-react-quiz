@@ -60,6 +60,7 @@ You can deploy this project using any static hosting service such as Netlify, Ve
 
 Build the project with `npm run build` and deploy the `dist` folder.
 
-## The screens![Group 1](https://github.com/user-attachments/assets/ebb8de45-7d5b-482a-9207-d1183f99eff8)
-hots of the app
+## The screenshots of the app
+![Group 1](https://github.com/user-attachments/assets/ebb8de45-7d5b-482a-9207-d1183f99eff8)
+
 
