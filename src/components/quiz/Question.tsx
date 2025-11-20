@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { X, ArrowLeft } from "lucide-react";
 import Options from "./Options";
+import Timer from "./Timer";
 
 type QuestionProps = {
   question: {
@@ -18,6 +19,7 @@ type QuestionProps = {
   points: number;
   maxPossiblePoints: number;
   secondsRemaining: number | null;
+  totalSeconds: number | null;
 };
 
 export default function Question({
@@ -29,14 +31,9 @@ export default function Question({
   points,
   maxPossiblePoints,
   secondsRemaining,
+  totalSeconds,
 }: QuestionProps) {
   const progressValue = ((index + Number(answer !== null)) / numQuestions) * 100;
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
-  };
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
@@ -70,10 +67,8 @@ export default function Question({
             Question <strong>{index + 1}</strong> / {numQuestions}
           </p>
           <div className="flex items-center gap-6">
-            {secondsRemaining !== null && (
-              <p className={`font-mono ${secondsRemaining <= 30 ? 'text-red-400 animate-pulse' : ''}`}>
-                ⏱️ {formatTime(secondsRemaining)}
-              </p>
+            {secondsRemaining !== null && totalSeconds !== null && (
+              <Timer secondsRemaining={secondsRemaining} totalSeconds={totalSeconds} />
             )}
             <p>
               <strong>{points}</strong> / {maxPossiblePoints} points

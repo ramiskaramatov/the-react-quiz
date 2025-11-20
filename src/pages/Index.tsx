@@ -21,6 +21,8 @@ type UserAnswer = {
   isCorrect: boolean;
 };
 
+const SECONDS_PER_QUESTION = 30;
+
 type State = {
   questions: QuestionType[];
   allQuestions: QuestionType[];
@@ -32,6 +34,7 @@ type State = {
   selectedDifficulty: "all" | "easy" | "medium" | "hard";
   userAnswers: UserAnswer[];
   secondsRemaining: number | null;
+  totalSeconds: number | null;
 };
 
 const getHighscore = () => {
@@ -54,6 +57,7 @@ const initialState: State = {
   selectedDifficulty: "all",
   userAnswers: [],
   secondsRemaining: null,
+  totalSeconds: null,
 };
 
 type Action =
@@ -98,9 +102,18 @@ function reducer(state: State, action: Action): State {
       };
     }
     case "start": {
-      return state.questions.length > 0
-        ? { ...state, status: "active", index: 0, answer: null, points: 0, userAnswers: [], secondsRemaining: state.questions.length * 30 }
-        : state;
+      if (state.questions.length === 0) return state;
+      const totalSeconds = state.questions.length * SECONDS_PER_QUESTION;
+      return {
+        ...state,
+        status: "active",
+        index: 0,
+        answer: null,
+        points: 0,
+        userAnswers: [],
+        secondsRemaining: totalSeconds,
+        totalSeconds,
+      };
     }
     case "newAnswer": {
       const question = state.questions[state.index];
@@ -171,6 +184,7 @@ function reducer(state: State, action: Action): State {
         points: 0,
         userAnswers: [],
         secondsRemaining: null,
+        totalSeconds: null,
       };
     case "finish": {
       const newHighscore = state.points > state.highscore ? state.points : state.highscore;
@@ -192,6 +206,7 @@ function reducer(state: State, action: Action): State {
         points: 0,
         userAnswers: [],
         secondsRemaining: null,
+        totalSeconds: null,
       };
     case "showReview":
       return {
@@ -227,7 +242,18 @@ function reducer(state: State, action: Action): State {
 
 export default function Index() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { questions, status, index, answer, points, highscore, selectedDifficulty, userAnswers, secondsRemaining } = state;
+  const {
+    questions,
+    status,
+    index,
+    answer,
+    points,
+    highscore,
+    selectedDifficulty,
+    userAnswers,
+    secondsRemaining,
+    totalSeconds,
+  } = state;
 
   const numQuestions = questions.length;
   const maxPossiblePoints = questions.length > 0 ? questions.reduce((acc, q) => acc + q.points, 0) : 0;
@@ -281,6 +307,7 @@ export default function Index() {
               points={points}
               maxPossiblePoints={maxPossiblePoints}
               secondsRemaining={secondsRemaining}
+              totalSeconds={totalSeconds}
             />
           )}
           {status === "finished" && (
