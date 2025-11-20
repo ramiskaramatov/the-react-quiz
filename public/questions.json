@@ -1,0 +1,479 @@
+{
+  "questions": [
+    {
+      "question": "Which is the most popular JavaScript framework?",
+      "options": ["Angular", "React", "Svelte", "Vue"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What's the fundamental building block of React apps?",
+      "options": ["Components", "Blocks", "Elements", "Effects"],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What's the name of the syntax we use to describe the UI in React components?",
+      "options": ["FBJ", "Babel", "JSX", "ES2015"],
+      "correctOption": 2,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "How does data flow naturally in React apps?",
+      "options": [
+        "From parents to children",
+        "From children to parents",
+        "Both ways",
+        "The developers decides"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "How to pass data into a child component?",
+      "options": ["State", "Props", "PropTypes", "Parameters"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the correct way to update state based on previous state?",
+      "options": [
+        "setState(state + 1)",
+        "setState((prev) => prev + 1)",
+        "setState(this.state + 1)",
+        "updateState(state + 1)"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which hook is used to perform side effects?",
+      "options": ["useState", "useEffect", "useContext", "useMemo"],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the key prop do in React lists?",
+      "options": [
+        "Styles the element",
+        "Helps React identify which items have changed",
+        "Makes the element clickable",
+        "Adds animation"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is React.memo used for?",
+      "options": [
+        "To memorize values",
+        "To prevent unnecessary re-renders of components",
+        "To cache API responses",
+        "To store state"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the purpose of useCallback?",
+      "options": [
+        "To memoize callback functions",
+        "To call functions asynchronously",
+        "To handle errors",
+        "To create event listeners"
+      ],
+      "correctOption": 0,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What does useMemo do?",
+      "options": [
+        "Memoizes component state",
+        "Memoizes expensive computations",
+        "Creates memory leaks",
+        "Stores data in memory"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is prop drilling?",
+      "options": [
+        "A method to optimize props",
+        "Passing props through multiple component layers",
+        "A React design pattern",
+        "A type of component"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the Context API used for?",
+      "options": [
+        "Managing local state",
+        "Sharing state across components without prop drilling",
+        "Making API calls",
+        "Styling components"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is a controlled component?",
+      "options": [
+        "A component that controls other components",
+        "A form element whose value is controlled by React state",
+        "A component with error boundaries",
+        "A component that uses refs"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is React Fragment used for?",
+      "options": [
+        "To break components",
+        "To group elements without adding extra nodes to the DOM",
+        "To split code",
+        "To handle errors"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What file extension is commonly used for React components?",
+      "options": [".js", ".jsx", ".react", ".component"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the virtual DOM?",
+      "options": [
+        "A copy of the real DOM kept in memory",
+        "A testing environment",
+        "A Chrome extension",
+        "A design pattern"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the correct command to create a new React app?",
+      "options": [
+        "npm create-react-app myapp",
+        "npx create-react-app myapp",
+        "npm install react-app",
+        "react new myapp"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of useRef hook?",
+      "options": [
+        "To reference other components",
+        "To access DOM elements and persist values across renders",
+        "To create references in documentation",
+        "To reference external libraries"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is useReducer best used for?",
+      "options": [
+        "Simple state management",
+        "Complex state logic with multiple sub-values",
+        "Styling components",
+        "Making API calls"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the default port for React development server?",
+      "options": ["3000", "8080", "5000", "4200"],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which method is used to render React elements to the DOM?",
+      "options": ["render()", "ReactDOM.render()", "React.render()", "mount()"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What does CSS stand for in the context of styling React components?",
+      "options": ["Cascading Style Sheets", "Component Style System", "Creative Style Solution", "Custom Styling Syntax"],
+      "correctOption": 0,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "Which hook allows functional components to have state?",
+      "options": ["useEffect", "useState", "useContext", "useRef"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of the key prop in React?",
+      "options": ["For styling", "For unique identification in lists", "For event handling", "For routing"],
+      "correctOption": 1,
+      "points": 10,
+      "difficulty": "easy"
+    },
+    {
+      "question": "What is the purpose of React Portals?",
+      "options": [
+        "To create modal dialogs",
+        "To render children into a DOM node outside the parent hierarchy",
+        "To manage routes",
+        "To handle forms"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the difference between state and props?",
+      "options": [
+        "State is immutable, props are mutable",
+        "Props are immutable, state is mutable",
+        "They are the same",
+        "State is for styling, props for data"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What does the useLayoutEffect hook do?",
+      "options": [
+        "It's the same as useEffect",
+        "It fires synchronously after all DOM mutations",
+        "It manages component layout",
+        "It creates CSS layouts"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is React Strict Mode used for?",
+      "options": [
+        "To make React faster",
+        "To highlight potential problems in an application",
+        "To enforce TypeScript",
+        "To enable production mode"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "How do you prevent a component from rendering?",
+      "options": [
+        "Return undefined",
+        "Return null",
+        "Return false",
+        "Return empty string"
+      ],
+      "correctOption": 1,
+      "points": 15,
+      "difficulty": "medium"
+    },
+    {
+      "question": "What is the purpose of React.lazy?",
+      "options": [
+        "To delay component rendering",
+        "To enable code-splitting and lazy loading of components",
+        "To make components load slowly",
+        "To optimize performance"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the correct way to handle errors in React components?",
+      "options": [
+        "Try-catch blocks",
+        "Error Boundaries",
+        "Console.error",
+        "Window.onerror"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is reconciliation in React?",
+      "options": [
+        "The process of resolving conflicts",
+        "The process React uses to diff one tree with another to determine what needs to change",
+        "The process of merging components",
+        "The process of error handling"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the purpose of useImperativeHandle?",
+      "options": [
+        "To create imperative code",
+        "To customize the instance value exposed to parent components when using ref",
+        "To handle events",
+        "To manage state imperatively"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    },
+    {
+      "question": "What is the difference between controlled and uncontrolled components?",
+      "options": [
+        "No difference",
+        "Controlled components have their state managed by React, uncontrolled by DOM",
+        "Controlled components are faster",
+        "Uncontrolled components use hooks"
+      ],
+      "correctOption": 1,
+      "points": 25,
+      "difficulty": "hard"
+    }
+  ]
+}
